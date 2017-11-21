@@ -1,0 +1,1 @@
+psql -h ec2-54-83-58-17.compute-1.amazonaws.com -U lieopdcbgeuepb -d d1nt13o8ofd091

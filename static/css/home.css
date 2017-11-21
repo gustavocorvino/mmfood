@@ -1,0 +1,45 @@
+/* Fonts from Google Fonts - more at https://fonts.google.com */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+@import url('https://fonts.googleapis.com/css?family=Lora');
+@import url('https://fonts.googleapis.com/css?family=Zilla+Slab+Highlight');
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+
+
+body {
+  background-color: #bfbbeb;
+  font-family: "Lora", sans-serif;
+  padding: 5px 25px;
+  font-size: 18px;
+  margin: 0;
+  color: #444;
+}
+
+h1 {
+  font-family: "Poiret One", serif;
+  font-size: 50px;    
+}
+
+h2{
+  font-family: "Poiret One";
+}
+
+.btn-landing-container{
+  text-align: center; 
+ 
+}
+
+.btn-landing{
+  font-family: "Poiret One";
+  font-size: 30px;
+  margin-top: 10px;
+  background-color: #bfbbeb;
+  padding: 30px 30px;
+}
+.btn-landing:hover{
+  border-style: solid;
+  border-color: beige;
+  
+}
+
+

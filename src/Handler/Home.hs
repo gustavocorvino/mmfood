@@ -22,6 +22,12 @@ getHomeR = do
                                     <input type="submit" value="Dar Notas">
                  <form action=@{RecomendarR} method=GET>
                                     <input type="submit" value="Procurar um restaurante">
+                
+                
+                
+                <center><h6> Dono de restaurante? Cadastre aqui
+                    <form action=@{RestauranteR} method=GET>
+                                    <input type "submit" value="Cadastro de restaurante">
                                     
                          |]
 

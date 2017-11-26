@@ -70,6 +70,8 @@ library
       Handler.Common
       Handler.Home
       Handler.Recomendar
+      Handler.Restaurante
+      Handler.Very
       Import
       Import.NoFoundation
       Model

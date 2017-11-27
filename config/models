@@ -1,7 +1,8 @@
-Usuario
+Usuario 
     nome  Text
     email Text
     senha Text
+    fator Int
     UniqueEmail email
 
 Restaurante

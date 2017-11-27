@@ -12,15 +12,29 @@ import Database.Persist.Postgresql
 import Yesod.Form.Types
 
 
-getRestauranteR :: Handler Html
-getRestauranteR = do 
-    (widget,enctype) <- generateFormPost formRestaurante
-    defaultLayout $ do
+getVerRestR :: RestauranteId -> Handler Html
+getVerRestR pid = do
+    restaurante <- runDB $ get404 pid
+    defaultLayout $ do 
         [whamlet|
-            <form action=@{RestauranteR} method=post>
-                ^{widget}
-                <input type="submit" value="Cadastrar">
+            <h1> Nome: #{restauranteNome restaurante}
+            <h2> Dono: #{restauranteDono restaurante}
+            <h2> Endereco: #{restauranteEndereco restaurante}
+            <h2> Tipo:  #{restauranteTipo restaurante}
+            <h2> Abertura: #{restauranteHoraA restaurante}
+            <h2> Fechamento: #{restauranteHoraF restaurante}
         |]
+
+
+--getVerRestR :: RestId -> Handler Html
+--getVerRestR = do 
+ --   (widget,enctype) <- generateFormPost formRestaurante
+  --  defaultLayout $ do
+  --      [whamlet|
+  --          <form action=@{RestauranteR} method=post>
+  --              ^{widget}
+ --               <input type="submit" value="Cadastrar">
+  --      |]
         
 data Estilo = Japones | Mexicano | Brasileiro | Indiano
    deriving (Show, Eq, Enum, Bounded)
@@ -40,6 +54,26 @@ formARestaurante = Restaurante
 
 formRestaurante :: Html -> MForm Handler (FormResult Restaurante, Widget)
 formRestaurante = renderTable formARestaurante
+
+--postRestauranteR :: Handler Html
+--postRestauranteR = do 
+--defaultLayout $ do
+ --       addStylesheet $ (StaticR css_home_css)
+  --      [whamlet|
+--              <body>
+ --                <center><h1>Sushifinder &#x1f363
+  --               |]
+
+getRestauranteR :: Handler Html
+getRestauranteR = do
+    (widget, enctype) <- generateFormPost formRestaurante
+    defaultLayout
+        [whamlet|
+            <form method=post action=@{RestauranteR}>
+                ^{widget}
+                <button>Cadastrar!
+            |]
+
     
 postRestauranteR :: Handler Html
 postRestauranteR = do 

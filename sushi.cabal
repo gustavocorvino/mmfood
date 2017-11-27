@@ -69,8 +69,10 @@ library
       Foundation
       Handler.Common
       Handler.Home
+      Handler.Login
       Handler.Recomendar
       Handler.Restaurante
+      Handler.Usuario
       Handler.Very
       Import
       Import.NoFoundation

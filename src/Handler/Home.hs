@@ -18,7 +18,7 @@ getHomeR = do
               <body>
                 <center><h1>Sushifinder &#x1f363
                 <center><h2>O quer quer fazer hoje?
-                 <form action=@{RecomendarR} method=GET>
+                 <form action=@{UsuarioR} method=GET>
                                     <input type="submit" value="Dar Notas">
                  <form action=@{RecomendarR} method=GET>
                                     <input type="submit" value="Procurar um restaurante">
